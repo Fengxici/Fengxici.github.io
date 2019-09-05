@@ -7,7 +7,7 @@
 
     
 
-    <title>hystrix dashboard | 企业级全站开源框架</title>
+    <title>源码使用说明 | 企业级全站开源框架</title>
     <meta name="author" content="Fengxici">
     
     <meta name="description" content="spring cloud 脚手架，dubbo脚手架，angular脚手架，WPF脚手架">
@@ -15,7 +15,7 @@
     
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-    
+    <meta property="og:title" content="源码使用说明">
     <meta property="og:site_name" content="Ukulele">
 
     
@@ -225,30 +225,226 @@
 
     <main>
         <div class="container main-container">
-    
-
-<nav class="page-nav hide-on-small-only">
+    <nav class="page-nav hide-on-small-only">
     <div class="nav-wrapper indigo">
-        <span class="breadcrumb">当前位置（标签）</span>
+        <span class="breadcrumb">当前位置（分类目录）</span>
         
+            
+    
+    
+    <a class="breadcrumb" href="/categories/spring-cloud/">spring cloud</a><a class="breadcrumb" href="/categories/spring-cloud/教程/">教程</a>
+
 
         
-            <a class="breadcrumb" href="/tags/hystrix-dashboard/">hystrix dashboard</a>
+
         
     </div>
 </nav>
 
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>源码使用说明</h1>
+    
 
 
-    <div class="collection mt-0">
+            </div>
+            <time class="pink-link-context" datetime="2019-09-05T03:25:55.000Z"><a href="/2019/09/05/spring-cloud/demo-source/">2019-09-05</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
         
-            <a href="/2019/08/31/spring-cloud/hystrix-dashboard/" class="collection-item grey-text text-darken-1">
-                <time datetime="2019-08-31T02:23:05.000Z">2019-08-31</time>
-                <span>&nbsp;&nbsp;&nbsp;</span>
-                第七章 服务熔断监控
-            </a>
+            <a href="/tags/spring-cloud/" class="chip pink lighten-1">spring cloud</a>
+        
+            <a href="/tags/源码/" class="chip pink lighten-1">源码</a>
         
     </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#前言"><span class="section table-of-contents-text">前言</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#源码地址"><span class="section table-of-contents-text">源码地址</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#目录结构"><span class="section table-of-contents-text">目录结构</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#章节介绍"><span class="section table-of-contents-text">章节介绍</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第一章"><span class="section table-of-contents-text">第一章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第二章"><span class="section table-of-contents-text">第二章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第三章"><span class="section table-of-contents-text">第三章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第四章"><span class="section table-of-contents-text">第四章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第五章"><span class="section table-of-contents-text">第五章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第六章"><span class="section table-of-contents-text">第六章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第七章"><span class="section table-of-contents-text">第七章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第八章"><span class="section table-of-contents-text">第八章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第九章"><span class="section table-of-contents-text">第九章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第十章"><span class="section table-of-contents-text">第十章</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#第十一章"><span class="section table-of-contents-text">第十一章</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本篇汇总了前12篇文章的源码，并对其使用方法做出说明。读者可与自己的实现做个比较。</p>
+<p>之所以未在每章中列出源码链接，主要是想让读者能都动手去实现，并且积极思考和解决在实现过程中所出现的问题。编程工作是一个实践性很强的工作，只有勤动手勤思考才能阵阵掌握所学技能。</p>
+<p><strong><em>请各位读者务必动手做完第二章-第十一章的编码工作，再来看下面的内容，否则您将不会有太多收获！！！</em></strong></p>
+<hr>
+<h1 id="源码地址"><a href="#源码地址" class="headerlink" title="源码地址"></a>源码地址</h1><ul>
+<li><p>github:</p>
+<blockquote>
+<p><a href="https://github.com/Fengxici/spring-cloud-current-demo" target="_blank" rel="noopener">https://github.com/Fengxici/spring-cloud-current-demo</a></p>
+</blockquote>
+</li>
+<li><p>gitee:</p>
+<blockquote>
+<p><a href="https://gitee.com/fengxici/spring-cloud-currect-demo" target="_blank" rel="noopener">https://gitee.com/fengxici/spring-cloud-currect-demo</a></p>
+</blockquote>
+</li>
+</ul>
+<h1 id="目录结构"><a href="#目录结构" class="headerlink" title="目录结构"></a>目录结构</h1><ul>
+<li>config-demo ——————–第十一章 配置中信<ul>
+<li>config-client ———————-配置中心客户端</li>
+<li>config-server ———————-配置中信服务端</li>
+</ul>
+</li>
+<li>consumer-service —————第四章 消费者服务</li>
+<li>eureka-demo ——————–第二章 注册中心Eureka<ul>
+<li>eureka-client ———————-注册中心客户端</li>
+<li>eureka-client ———————-注册中心服务端</li>
+</ul>
+</li>
+<li>gateway-demo ——————-第五章 网关<ul>
+<li>cloud-gateway-demo —————–Spring Cloud Gateway</li>
+<li>zuul-demo ————————–Netflix Zuul</li>
+</ul>
+</li>
+<li>hystrix-dashboard-demo ———第七章 服务熔断监控</li>
+<li>hystrix-demo ——————-第六章 服务熔断</li>
+<li>monitor-demo ——————-第十章 配置中心<ul>
+<li>client-demo ————————配置中心客户端</li>
+<li>server-demo ————————配置中心服务端</li>
+</ul>
+</li>
+<li>provider-service —————第四章 服务消费者</li>
+<li>spring-boot-demo —————第二章 Spring Boot简介</li>
+<li>trace-demo ———————第九章 链路跟踪<ul>
+<li>customer-demo ———————-服务消费者</li>
+<li>provider-demo ———————-服务提供者</li>
+<li>sleuth-zipkin-demo —————–链路跟踪服务</li>
+</ul>
+</li>
+<li>turbine-demo —————————第八章 服务熔断汇总</li>
+</ul>
+<h1 id="章节介绍"><a href="#章节介绍" class="headerlink" title="章节介绍"></a>章节介绍</h1><p>每个章节的知识点不同，所要用到的命令以及各章节之间的关联都有所不同，下面依次按章节进行介绍。在此之前，先把可能要用到的命令罗列如下：</p>
+<ul>
+<li><p>打包 </p>
+<blockquote>
+<p>mvn package</p>
+</blockquote>
+</li>
+<li><p>运行(maven方式)</p>
+<blockquote>
+<p>mvn spring-boot:run</p>
+</blockquote>
+</li>
+</ul>
+<p>以上需要在pom.xml所在目录下执行</p>
+<ul>
+<li><p>运行(java方式)</p>
+<blockquote>
+<p>java -jar xxxx.jar</p>
+</blockquote>
+</li>
+<li><p>多环境运行(java方式)</p>
+<blockquote>
+<p>java jar xxx.jar –spring.profiles.active=dev</p>
+</blockquote>
+</li>
+<li><p>修改服务启动端口(java方式)</p>
+<blockquote>
+<p>java jar xxx.jar –server.port=9090</p>
+</blockquote>
+</li>
+</ul>
+<p>以上需要在.jar文件所在目录下执行</p>
+<h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>使用idea导入项目时，请将导入目录指定至spring-boot-demo下</p>
+<p>非开发工具(如IDEA)下我们可以这样运行程序，在项目根目录下（pom.xml所在目录)</p>
+<blockquote>
+<p>1 打包 mvn package<br>2 运行 mvn spring-boot:run </p>
+</blockquote>
+<p>或</p>
+<blockquote>
+<p>1 打包 mvn package<br>2 进入target目录 cd target<br>3 运行 java jar spring-boot-demo-1.0-SNAPSHOT.jar</p>
+</blockquote>
+<p>若需要修改端口第2步改为</p>
+<blockquote>
+<p>java -jar spring-boot-demo-1.0-SNAPSHOT.jar –server.port=9090</p>
+</blockquote>
+<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>eureka-demo</strong>下</p>
+<p>本章代码是最终完成版，eureke-server/src/main/resources目录下的application.yml配置文件里放置的集群配置。如需单机版运行，请参照注释说明开启单机版配置，注释集群版注释。</p>
+<p>本章含两个子项目，必须先启动eureka服务端(eureka-server)，再启动eureka客户端(erureka-client).</p>
+<p>打包，运行方式同第一章</p>
+<p>集群部署请先修改好eureka-server下的application.yml的配置，后依次执行：</p>
+<blockquote>
+<p>java -jar eureka-server.jar –spring.profiles.active=peer1</p>
+</blockquote>
+<blockquote>
+<p>java -jar eureka-server.jar –spring.profiles.active=peer2</p>
+</blockquote>
+<blockquote>
+<p>java -jar eureka-server.jar –spring.profiles.active=peer3</p>
+</blockquote>
+<h2 id="第三章"><a href="#第三章" class="headerlink" title="第三章"></a>第三章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>provider-service</strong>下</p>
+<p>本章需使用第二章的eureka-server模块作为注册中心，并且使用的是单机版，所以请先修改好eureka-server的配置。建议改好后打包成jar包，并复制到其他目录，后续项目几乎都会用到该注册中心。</p>
+<p>需先启动注册中心，再启动提供者服务，所使用命令与上文相同。</p>
+<h2 id="第四章"><a href="#第四章" class="headerlink" title="第四章"></a>第四章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>consumer-service</strong>下</p>
+<p>本章同样使用第二章的eureka-server模块作为注册中心，在此不再赘述。</p>
+<p>本章还要使用第三章的提供者服务，所有在启动本章服务之前，先启动第三章的服务。</p>
+<p>一切正常的情况下，关闭第三章的提供者服务，观察效果。</p>
+<h2 id="第五章"><a href="#第五章" class="headerlink" title="第五章"></a>第五章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>getway-demo</strong>下</p>
+<p>本章的两个服务相互独立，无相互依赖关系，无需关注前后顺序。两个项目单独实验。</p>
+<p>本章同样使用了注册中心，服务提供者，服务消费者，请依次启动这三个服务。<strong>建议将他们打包放置在固定的目录下，以备后续使用</strong></p>
+<p>打包或启动所使用命令均与前文相同。</p>
+<h2 id="第六章"><a href="#第六章" class="headerlink" title="第六章"></a>第六章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>hystrix-demo</strong>下</p>
+<p>熔断相对于服务消费者而言，如果获取不到服务提供者的调用，服务消费者要进行降级处理，所以本章是对第四章服务消费者的改造，因此本章使用到的项目有 第二章(eureka-server)和第三章(provider-service)。 请先依次启动这两个服务。</p>
+<p>本章内容可以第四章做个对比，从中观察熔断的作用。</p>
+<h2 id="第七章"><a href="#第七章" class="headerlink" title="第七章"></a>第七章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>hystrix-dashboard-demo</strong>下</p>
+<p>本章与第六章相似。启动过程和依赖关系都同第六章，在此不再赘述。</p>
+<p>相比于第六章本章在效果上多了熔断监控界面，在这个界面里可以很直观的观测到消费者对提供者的调用情况。</p>
+<h2 id="第八章"><a href="#第八章" class="headerlink" title="第八章"></a>第八章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>turbine-demo</strong>下</p>
+<p>本章是对第七章服务监控的汇总。当有很多消费者的时候，我们不可能去每一个消费者那里查看调用情况，甚至也不能知道到哪个消费者那里去查看，因此，需要一个集中查看调用健康状态的地方。</p>
+<p>本章依赖的项目有 第二章(eureka-server)，第三章(provider-service)和第七章（hystrix-dashbaord-service)，请先依次启动他们。</p>
+<p>需要说明的是hystrix-dashbaord-service需要启动至少两个才能看出效果。启动两个以上的服务只需修改端口号即可。所以启动命令可使用</p>
+<blockquote>
+<p>java -jar hystrix-dashboard-service.jar –server.port=10000</p>
+</blockquote>
+<blockquote>
+<p>java -jar hystrix-dashboard-service.jar –server.port=20000</p>
+</blockquote>
+<h2 id="第九章"><a href="#第九章" class="headerlink" title="第九章"></a>第九章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>trace-demo</strong>下</p>
+<p>本章需要依赖第三章和第四章项目，因为改动部分代码，所以在这里进行了重新创建。</p>
+<p>注册中心服务需要先启动，其他无先后顺序。</p>
+<h2 id="第十章"><a href="#第十章" class="headerlink" title="第十章"></a>第十章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>monitor-demo</strong>下</p>
+<p>注册中心服务需要先启动，其他无先后顺序。</p>
+<h2 id="第十一章"><a href="#第十一章" class="headerlink" title="第十一章"></a>第十一章</h2><p>使用idea导入项目时，请将导入目录指定至<strong>config-demo</strong>下</p>
+<p>注册中心服务需要先启动，其他无先后顺序。</p>
+<p>本章默认将配置文件放在classpath下，所以打包后运行就不能修改配置文件，因此请使用mvn方式运行。要修改的配置文件在target/classes/config目录下。</p>
+<p>看过文章依然存疑的读者请移步源码仓库，扫描二维码进群讨论。</p>
+<p>如果您觉得对您有帮助请给项目一个star。</p>
+<p>创作不易，请君鼓励。谢谢。</p>
+<p>个人能力有限，才疏学浅，如有疏漏，烦请斧正。</p>
+
+                
+
+
+<p class="pink-link-context">
+    <a href="/2019/08/31/spring-cloud/config/" rel="next" title="第十一章 配置中心">
+    下一篇：第十一章 配置中心
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
 
 
 </div>
