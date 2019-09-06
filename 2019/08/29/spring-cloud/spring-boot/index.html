@@ -171,22 +171,6 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/前言/">
-                    前言 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/前言/项目简介/">
-                    项目简介 <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/spring-cloud/">
                     spring-cloud <span class="right">13 篇</span></a>
                 </a>
@@ -197,6 +181,22 @@
             <li class="collapse-level-1" collapse-level="1">
                 <a class="no-padding" href="/categories/spring-cloud/教程/">
                     教程 <span class="right">13 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Ukulele/">
+                    Ukulele <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/Ukulele/项目简介/">
+                    项目简介 <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -373,7 +373,7 @@
 <h2 id="10-多环境配置"><a href="#10-多环境配置" class="headerlink" title="10.多环境配置"></a>10.多环境配置</h2><p>我们都会遇到以下的场景：当我们在开发阶段，使用自己的机器开发，测试的时候需要用的测试服务器测试，上线时使用正式环境的服务器。这三种环境需要的配置信息都不一样，当我们切换环境运行项目时，需要手动的修改多处配置信息，非常容易出错。</p>
 <p>为了解决上述问题，Spring Boot 提供多环境配置的机制，让开发者非常容易的根据需求而切换不同的配置环境。</p>
 <p>修改application.yml文件：</p>
-<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#公共部分</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    application:</span></span><br><span class="line"><span class="attr">    name:</span> <span class="string">spring-boot-demo(可自行指定)</span></span><br><span class="line"><span class="comment">#指定使用哪一个配置</span></span><br><span class="line"><span class="attr">profiles:</span></span><br><span class="line"><span class="attr">    active:</span> <span class="string">dev</span></span><br><span class="line"><span class="comment"># 开发环境 使用8080端口，打开actuator全部端点和shutdown端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8080</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">dev</span></span><br><span class="line"></span><br><span class="line"><span class="attr">management:</span></span><br><span class="line"><span class="attr">    endpoints:</span></span><br><span class="line"><span class="attr">        web:</span></span><br><span class="line"><span class="attr">            exposure:</span></span><br><span class="line"><span class="attr">                include:</span> <span class="string">"*"</span></span><br><span class="line"><span class="attr">    endpoint:</span></span><br><span class="line"><span class="attr">        shutdown:</span></span><br><span class="line"><span class="attr">            enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#测试环境 使用8081端口，打开actuator全部端点和shutdown端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8081</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">test</span></span><br><span class="line"></span><br><span class="line"><span class="attr">management:</span></span><br><span class="line"><span class="attr">    endpoints:</span></span><br><span class="line"><span class="attr">        web:</span></span><br><span class="line"><span class="attr">            exposure:</span></span><br><span class="line"><span class="attr">                include:</span> <span class="string">"*"</span></span><br><span class="line"><span class="attr">    endpoint:</span></span><br><span class="line"><span class="attr">        shutdown:</span></span><br><span class="line"><span class="attr">            enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#生产环境 使用8082端口，使用actuator默认端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8082</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">pro</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#公共部分</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    application:</span></span><br><span class="line">		<span class="attr">name:</span> <span class="string">spring-boot-demo(可自行指定)</span></span><br><span class="line"><span class="comment">#指定使用哪一个配置</span></span><br><span class="line">	<span class="attr">profiles:</span></span><br><span class="line">		<span class="attr">active:</span> <span class="string">dev</span></span><br><span class="line"><span class="comment"># 开发环境 使用8080端口，打开actuator全部端点和shutdown端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8080</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">dev</span></span><br><span class="line"></span><br><span class="line"><span class="attr">management:</span></span><br><span class="line"><span class="attr">    endpoints:</span></span><br><span class="line"><span class="attr">        web:</span></span><br><span class="line"><span class="attr">            exposure:</span></span><br><span class="line"><span class="attr">                include:</span> <span class="string">"*"</span></span><br><span class="line"><span class="attr">    endpoint:</span></span><br><span class="line"><span class="attr">        shutdown:</span></span><br><span class="line"><span class="attr">            enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#测试环境 使用8081端口，打开actuator全部端点和shutdown端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8081</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">test</span></span><br><span class="line"></span><br><span class="line"><span class="attr">management:</span></span><br><span class="line"><span class="attr">    endpoints:</span></span><br><span class="line"><span class="attr">        web:</span></span><br><span class="line"><span class="attr">            exposure:</span></span><br><span class="line"><span class="attr">                include:</span> <span class="string">"*"</span></span><br><span class="line"><span class="attr">    endpoint:</span></span><br><span class="line"><span class="attr">        shutdown:</span></span><br><span class="line"><span class="attr">            enabled:</span> <span class="literal">true</span></span><br><span class="line"><span class="comment">#生产环境 使用8082端口，使用actuator默认端点</span></span><br><span class="line"><span class="meta">---</span></span><br><span class="line"><span class="attr">server:</span></span><br><span class="line"><span class="attr">    port:</span> <span class="number">8082</span></span><br><span class="line"><span class="attr">spring:</span></span><br><span class="line"><span class="attr">    profiles:</span> <span class="string">pro</span></span><br></pre></td></tr></table></figure>
 
 <p>修改profiles:active节点的值即可指定使用哪一个环境的配置。</p>
 <p>同样我们也可以对日志进行多环境配置。在logback-spring.xml里的appender节点外使用springProfile将其包起即可实现多环境配置。这里以日志输出格式为例：</p>
@@ -396,8 +396,8 @@
 
                 
 <p class="pink-link-context">
-    <a href="/2019/08/29/hello-ukulele/" rel="next" title="Hello Ukulele">
-    上一篇：Hello Ukulele
+    <a href="/2019/08/30/spring-cloud/eureka/" rel="next" title="第二章 注册中心Eureka">
+    上一篇：第二章 注册中心Eureka
   </a>
 </p>
 
