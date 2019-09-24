@@ -1,0 +1,902 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    
+
+    <title>第一章 相关概念 | 企业级全站开源框架</title>
+    <meta name="author" content="Fengxici">
+    
+    <meta name="description" content="spring cloud 脚手架，dubbo脚手架，angular脚手架，WPF脚手架">
+    
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:title" content="第一章 相关概念">
+    <meta property="og:site_name" content="Ukulele">
+
+    
+    <meta property="og:image" content>
+    
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="alternate" href="/atom.xml" title="Ukulele" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/lib/materialize.min.css">
+    <link rel="stylesheet" href="/css/lib/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+    
+        <link rel="stylesheet" href="/css/lib/prettify-tomorrow-night-eighties.css" type="text/css">
+    
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+</html>
+
+<body>
+    <img src="/weixin_favicon.png" style="position: absolute; left: -9999px; opacity: 0; filter: alpha(opacity=0);">
+
+    <nav class="indigo">
+    <div class="nav-wrapper">
+        <a href="#" data-activates="main-menu" class="button-collapse">
+            <i class="fa fa-navicon"></i>
+        </a>
+        <div class="">
+            <a href="/" class="brand-logo hide-on-med-and-down">Ukulele</a>
+            <ul class="right hide-on-med-and-down">
+                
+                    <li>
+                        <a class="menu-home " href="/" >
+                            <i class="fa fa-home "></i>
+                            
+                            首页
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-archive " href="/archives" >
+                            <i class="fa fa-archive "></i>
+                            
+                            归档
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                            <i class="fa fa-bookmark "></i>
+                            
+                            分类
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-reading " href="/thanks" >
+                            <i class="fa fa-book "></i>
+                            
+                            致谢
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-about " href="/about" >
+                            <i class="fa fa-user "></i>
+                            
+                            关于
+                        </a>
+                    </li>
+                
+                    <li>
+                        <a class="menu-search modal-trigger " href="#search" >
+                            <i class="fa fa-search "></i>
+                            
+                            搜索
+                        </a>
+                    </li>
+                
+            </ul>
+            <div>
+    <ul class="side-nav indigo darken-1" id="main-menu">
+        
+        <li class="side-user">
+            <div class="row">
+                <div class="col s4 no-padding">
+                    <img class="avatar-image circle responsive-img" src="/css/images/avatar.jpg" alt="User Avatar">
+                </div>
+                <div class="info col s8 valign-wrapper no-padding">
+                    <div class="valign">
+                        <p class="name">风戏辞</p>
+                        <p class="desc">JAVA/C#/Android/Web前端/iOS/Python/技术宅</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+        
+
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-home " href="/" >
+                    <i class="fa fa-home "></i>
+                    
+                    首页
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-archive " href="/archives" >
+                    <i class="fa fa-archive "></i>
+                    
+                    归档
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-category category-menu" href="javascript:;" data-activates="category-menu" >
+                    <i class="fa fa-bookmark "></i>
+                    
+                    分类
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-reading " href="/thanks" >
+                    <i class="fa fa-book "></i>
+                    
+                    致谢
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-about " href="/about" >
+                    <i class="fa fa-user "></i>
+                    
+                    关于
+                </a>
+            </li>
+        
+            <li class="no-padding">
+                <a class="waves-effect menu-search modal-trigger " href="#search" >
+                    <i class="fa fa-search "></i>
+                    
+                    搜索
+                </a>
+            </li>
+        
+    </ul>
+
+    <ul class="side-nav indigo darken-1" id="category-menu">
+    
+
+            
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/构建/">
+                    构建 <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/构建/Maven/">
+                    Maven <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/spring-cloud/">
+                    spring-cloud <span class="right">14 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/spring-cloud/教程/">
+                    教程 <span class="right">14 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/Ukulele/">
+                    Ukulele <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/Ukulele/项目简介/">
+                    项目简介 <span class="right">1 篇</span></a>
+                </a>
+            </li>
+
+        
+
+    </ul>
+</div>
+
+        </div>
+    </div>
+</nav>
+
+<div id="search" class="modal search-modal">
+    <div class="row">
+        <div class="input-field col s12">
+              <input id="search-input" type="text">
+              <label for="search-input">搜索</label>
+        </div>
+
+    </div>
+    <div id="search-result" class="search-result col s12">
+
+    </div>
+</div>
+
+
+    <main>
+        <div class="container main-container">
+    <nav class="page-nav hide-on-small-only">
+    <div class="nav-wrapper indigo">
+        <span class="breadcrumb">当前位置（分类目录）</span>
+        
+            
+    
+    
+    <a class="breadcrumb" href="/categories/构建/">构建</a><a class="breadcrumb" href="/categories/构建/Maven/">Maven</a>
+
+
+        
+
+        
+    </div>
+</nav>
+
+<article>
+    <div class="card">
+        <div class="card-content">
+            
+
+            <div class="article-title">
+                
+    
+        <h1>第一章 相关概念</h1>
+    
+
+
+            </div>
+            <time class="pink-link-context" datetime="2019-09-11T06:04:15.000Z"><a href="/2019/09/11/build/maven/maven-concept/">2019-09-11</a></time>
+
+            <span id="busuanzi_container_page_pv" class="read-times-container">
+    <i class="fa fa-eye"></i>
+    <span id="busuanzi_value_page_pv"></span>
+</span>
+
+            
+    <div class="tags-row">
+        
+            <a href="/tags/Maven/" class="chip pink lighten-1">Maven</a>
+        
+            <a href="/tags/概念/" class="chip pink lighten-1">概念</a>
+        
+    </div>
+
+
+            <div class="toc pink-link-context hide-on-med-and-down">
+    <ol class="section table-of-contents"><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#父（Super）POM"><span class="section table-of-contents-text">父（Super）POM</span></a></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#坐标"><span class="section table-of-contents-text">坐标</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#坐标元素解释"><span class="section table-of-contents-text">坐标元素解释</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#坐标注意点"><span class="section table-of-contents-text">坐标注意点</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#依赖"><span class="section table-of-contents-text">依赖</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#依赖的配置"><span class="section table-of-contents-text">依赖的配置</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#依赖的范围"><span class="section table-of-contents-text">依赖的范围</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#依赖范围与classpath的关系"><span class="section table-of-contents-text">依赖范围与classpath的关系</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#传递性依赖"><span class="section table-of-contents-text">传递性依赖</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#依赖的调解"><span class="section table-of-contents-text">依赖的调解</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#可选依赖"><span class="section table-of-contents-text">可选依赖</span></a></li></ol></li><li class="section table-of-contents-item section table-of-contents-level-1"><a class="section table-of-contents-link" href="#依赖的最佳实践"><span class="section table-of-contents-text">依赖的最佳实践</span></a><ol class="section table-of-contents-child"><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#排除依赖"><span class="section table-of-contents-text">排除依赖</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#归类依赖"><span class="section table-of-contents-text">归类依赖</span></a></li><li class="section table-of-contents-item section table-of-contents-level-2"><a class="section table-of-contents-link" href="#优化依赖"><span class="section table-of-contents-text">优化依赖</span></a></li></ol></li></ol>
+</div>
+
+
+            <div class="entry pink-link-context">
+                <p>POM( Project Object Model，项目对象模型 ) 是 Maven 工程的基本工作单元，是一个XML文件，包含了项目的基本信息，用于描述项目如何构建，声明项目依赖，等等。</p>
+<p><strong>pom.xml是玩转maven最重要的文件</strong></p>
+<p>执行任务或目标时，Maven 会在当前目录中查找 POM。它读取 POM，获取所需的配置信息，然后执行目标。</p>
+<p>POM 中可以指定以下配置：</p>
+<ul>
+<li>项目依赖</li>
+<li>插件</li>
+<li>执行目标</li>
+<li>项目构建 profile</li>
+<li>项目版本</li>
+<li>项目开发者列表</li>
+<li>相关邮件列表信息</li>
+</ul>
+<p>所有 POM 文件都需要 project 元素和三个必需字段：groupId，artifactId，version。</p>
+<table>
+<thead>
+<tr>
+<th>节点</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>project</td>
+<td>工程的根标签</td>
+</tr>
+<tr>
+<td>modelVersion</td>
+<td>模型版本</td>
+</tr>
+<tr>
+<td>groupId</td>
+<td>这是工程组的标识。它在一个组织或者项目中通常是唯一的</td>
+</tr>
+<tr>
+<td>artifactId</td>
+<td>这是工程的标识。它通常是工程的名称</td>
+</tr>
+<tr>
+<td>version</td>
+<td>这是工程的版本号。在 artifact 的仓库中，它用来区分不同的版本</td>
+</tr>
+</tbody></table>
+<h1 id="父（Super）POM"><a href="#父（Super）POM" class="headerlink" title="父（Super）POM"></a>父（Super）POM</h1><p>父（Super）POM是 Maven 默认的 POM。所有的 POM 都继承自一个父 POM（无论是否显式定义了这个父 POM）。父 POM 包含了一些可以被继承的默认设置。因此，当 Maven 发现需要下载 POM 中的 依赖时，它会到 Super POM 中配置的默认仓库 <a href="http://repo1.maven.org/maven2" target="_blank" rel="noopener">http://repo1.maven.org/maven2</a> 去下载。</p>
+<p>Maven 使用 effective pom（Super pom 加上工程自己的配置）来执行相关的目标，它帮助开发者在 pom.xml 中做尽可能少的配置，当然这些配置可以被重写。</p>
+<p>使用以下命令来查看 Super POM 默认配置：</p>
+<blockquote>
+<p>mvn help:effective-pom</p>
+</blockquote>
+<p>effective-pom结果中，你可以看到 Maven 在执行目标时需要用到的默认工程源码目录结构、输出目录、需要的插件、仓库和报表目录。</p>
+<p>Maven 的 pom.xml 文件也不需要手工编写。</p>
+<p>Maven 提供了大量的原型插件来创建工程，包括工程结构和 pom.xml。</p>
+<h1 id="坐标"><a href="#坐标" class="headerlink" title="坐标"></a>坐标</h1><p><strong>Maven坐标</strong>为各种构件引入了秩序，任何一个构件都必须明确定义自己的坐标，而一组Maven坐标是通过一些元素定义的，他们是groupId、artifactId、version、packaging、classifier。先看一组坐标定义，如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>Greenwich.SR2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="坐标元素解释"><a href="#坐标元素解释" class="headerlink" title="坐标元素解释"></a>坐标元素解释</h2><blockquote>
+<p>groupId：定义当前maven项目隶属的实际项目</p>
+</blockquote>
+<blockquote>
+<p>artifactId：定义实际项目中的一个Maven项目的模块</p>
+</blockquote>
+<blockquote>
+<p>version：定义Maven项目当前所处的版本</p>
+</blockquote>
+<p>注意：Maven定义了一套完成的版本概念，以及快照SnapShot的概念</p>
+<blockquote>
+<p>packaging：定义Maven项目打包的方式（jar包、war包）<br>打包方式会影响到构建的生命周期，比如jar打包和war打包会使用不同的命令。当不定义packaging的时候，Maven 会使用默认值jar。</p>
+</blockquote>
+<blockquote>
+<p>classifier：用来帮助定义构建输出的一些附属构件，如Java文档和源代码。</p>
+</blockquote>
+<p>注意：不能直接定义项目的classifier，因为附属构件不是项目直接默认生成的，而是由附加的插件帮助生成的。</p>
+<h2 id="坐标注意点"><a href="#坐标注意点" class="headerlink" title="坐标注意点"></a>坐标注意点</h2><p>上述5个元素中： groupId、artifactld、 version 是必须定义的；packaging是可选的(默认为jar)；而classifier是不能直接定义的。</p>
+<p>同时，项目构件的文件名是与坐标相对应的，一般的规则为artifactld-version[ -classifier].packaging  其中[ -classifier]表示可选。要强调的一点是：       packaging并非一定与构件展名对应，比如packaging为maven-plugin的构件扩展名为jar。</p>
+<h1 id="依赖"><a href="#依赖" class="headerlink" title="依赖"></a>依赖</h1><h2 id="依赖的配置"><a href="#依赖的配置" class="headerlink" title="依赖的配置"></a>依赖的配置</h2><p>一个依赖声明可以包含如下的一些元素：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>***<span class="tag">&lt;/<span class="name">groupId</span> &gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>***<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>***<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">type</span>&gt;</span>***<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>***<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">optional</span>&gt;</span>***<span class="tag">&lt;/<span class="name">optional</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">exclusison</span>&gt;</span></span><br><span class="line">        ...</span><br><span class="line">        <span class="tag">&lt;/<span class="name">exclusion</span> &gt;</span></span><br><span class="line">    ...</span><br><span class="line">    <span class="tag">&lt;/<span class="name">exclusions</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span> &gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>根元素projet下的一个或者多个dependency 元素需包含在一个<strong>dependencies</strong>标签下，以声明一个或者多个项目依赖。每个依赖可以包含的元素有:</p>
+<blockquote>
+<ol>
+<li>groupld、artifactld和version：依赖的基本坐标，对于任何个依赖来说，基本坐标是最重要的，Maven 根据坐标才能找到需要的依赖。</li>
+<li>type：依赖的类型，对应于项目坐标定义的packaging。大部分情况下，该元素不必声明，其默认值为jar</li>
+<li>scope：依赖的范围</li>
+<li>optional：标记依赖是否可选</li>
+<li>exclusions：用来排除传递性依赖</li>
+</ol>
+</blockquote>
+<p>大部分依赖声明只包含基本坐标，然而在一些特殊情况下，其他元素至关重要.</p>
+<p>PS: 开发过程中我们可以通过：<a href="https://search.maven.org/" target="_blank" rel="noopener">https://search.maven.org/</a> 来查询我们所需依赖的版本。</p>
+<h2 id="依赖的范围"><a href="#依赖的范围" class="headerlink" title="依赖的范围"></a>依赖的范围</h2><p>依赖范围就是用来控制依赖与三种classpath ( 编译classpath、测试classpath、运行classpath)的关系。maven有以下几种依赖范围:</p>
+<blockquote>
+<p>compile（默认的）</p>
+</blockquote>
+<p>编译依赖范围。如果没有指定，就会默认使用该依赖范围。使用此依赖范围的Maven依赖，对于编译、测试、运行三种classpath都有效。典型的例子是spring-core,在编译、测试和运行的时候都需要使用该依赖。</p>
+<blockquote>
+<p>test</p>
+</blockquote>
+<p>测试依赖范围。使用此依赖范围的Maven依赖，只对于测试classpath有效，在编译主代码或者运行项目的使用时将无法使用此类依赖。典型的例子是JUnit,它只有在编译测试代码及运行测试的时候才需要。</p>
+<blockquote>
+<p>provided</p>
+</blockquote>
+<p>已提供依赖范围。使用此依赖范围的Maven依赖，对于编译和测试classpath有效，但在运行时无效。典型的例子是:servlet-api,编译和测试项目的时候需要该依赖，但在运行项目的时候，由于容器已经提供，就不需要Maven重复地引入一遍。</p>
+<blockquote>
+<p>runtime</p>
+</blockquote>
+<p>运行时依赖范围。使用此依赖范围的Maven依赖，对于测试和运行classpath有效，但在编译主代码时无效。典型的例子是JDBC驱动实现，项目主代码的编译只需要JDK提供的JDBC接口，只有在执行测试或者运行项目的时候才需要实现上述接口的具体JDBC驱动。</p>
+<blockquote>
+<p>system</p>
+</blockquote>
+<p>系统依赖范围。该依赖与三种classpath的关系，和provided依赖范围完全致。但是，使用system范围的依赖时必须通过systemPath元素显式地指定依赖文件的路径。由于此类依赖不是通过Maven仓库解析的，而且往往与本机系统绑定，可能造成构建的不可移植，因此应该谨慎使用。systemPath 元素可以引用环境变量</p>
+<blockquote>
+<p>import</p>
+</blockquote>
+<p>导人依赖范围,Maven 2.0.9及以上版本支持。该依赖范围不会对三种classpath产生实际的影响</p>
+<h2 id="依赖范围与classpath的关系"><a href="#依赖范围与classpath的关系" class="headerlink" title="依赖范围与classpath的关系"></a>依赖范围与classpath的关系</h2><table>
+<thead>
+<tr>
+<th>依赖范围（Scope）</th>
+<th>对编译classpath有效</th>
+<th>对测试classpath有效</th>
+<th>对运行时classpath有效</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>compile</td>
+<td>Y</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>test</td>
+<td>-</td>
+<td>Y</td>
+<td>-</td>
+</tr>
+<tr>
+<td>provide</td>
+<td>Y</td>
+<td>Y</td>
+<td>-</td>
+</tr>
+<tr>
+<td>runtime</td>
+<td>-</td>
+<td>Y</td>
+<td>Y</td>
+</tr>
+<tr>
+<td>system</td>
+<td>Y</td>
+<td>Y</td>
+<td>-</td>
+</tr>
+</tbody></table>
+<h2 id="传递性依赖"><a href="#传递性依赖" class="headerlink" title="传递性依赖"></a>传递性依赖</h2><blockquote>
+<p>假设A依赖于B, B依赖于C,我们说A对于B是第一直接依赖，B对于C是第二直接依赖，A对于C是传递性依赖。</p>
+</blockquote>
+<blockquote>
+<p>第一直接依赖的范围和第二直接依赖的范围决定了传递性依赖的范围</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>compile</th>
+<th>test</th>
+<th>provide</th>
+<th>runtime</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>compile</td>
+<td>compile</td>
+<td>-</td>
+<td>-</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>test</td>
+<td>test</td>
+<td>-</td>
+<td>-</td>
+<td>test</td>
+</tr>
+<tr>
+<td>provide</td>
+<td>provide</td>
+<td>-</td>
+<td>provide</td>
+<td>provide</td>
+</tr>
+<tr>
+<td>runtime</td>
+<td>runtime</td>
+<td>-</td>
+<td>-</td>
+<td>runtime</td>
+</tr>
+<tr>
+<td>上表所示，最左边一列表示第一直接依赖范围，最上面一行表示第二直接依赖范围，中间的交叉单元格则表示传递性依赖范围</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h2 id="依赖的调解"><a href="#依赖的调解" class="headerlink" title="依赖的调解"></a>依赖的调解</h2><p>当传递性依赖造成问题的时候，我们就需要清楚的知道该传递性依赖是从哪条路径引入的。</p>
+<p>例如： 项目A有这样的依赖关系: A-&gt;B-&gt;C-&gt;X(1.0)、A-&gt;D-&gt;X(2.0), X是A的传递性依赖，但是两条依赖路径上有两个版本的X,那么哪个X会被Maven解析使用呢? </p>
+<p>Maven 依赖调解( Dependency Mediation)的</p>
+<blockquote>
+<p>第一原则是:路径最近者优先。</p>
+</blockquote>
+<p>该例中X(1.0)的路径长度为3，而X(2.0)的路径长度为2，因此X(2.0)会被解析使用。</p>
+<blockquote>
+<p>第二原则： 依赖声明的顺序在前的优先</p>
+</blockquote>
+<p>比如这样的依赖关系: A-&gt;B-&gt;Y(1.0)、 A-&gt;C-&gt; Y(2.0)，Y(1. 0)和Y(2. 0)的依赖路径长度是一样的，都为2。Maven 定义了依赖调解的第二原则:第一声明者优先。在依赖路径长度相等的前提下，在POM中依赖声明的顺序决定了谁会被解析使用，顺序最靠前的那个依赖优胜。该例中，如果B的依赖声明在C之前，那么Y (1.0)就会被解析使用。</p>
+<h2 id="可选依赖"><a href="#可选依赖" class="headerlink" title="可选依赖"></a>可选依赖</h2><p>假设有这样一个依赖关系，项目A依赖于项目B,项目B依赖于项目X和Y, B对于X和Y的依赖都是可选依赖:A-&gt;B、B-&gt;X(可选)、B-&gt;Y(可选)。根据传递性依赖的定义，如果所有这三个依赖的范围都是compile,那么X、Y就是A的compile范围传递性依赖。然而，由于这里X、Y是可选依赖，依赖将不会得以传递。换句话说，X、Y将不会对A有任何影响</p>
+<blockquote>
+<p>1、显示声明：如果A需要使用B所依赖的X或者Y，只能在A中显示的声明该依赖。</p>
+</blockquote>
+<blockquote>
+<p>2、尽量避免使用：关于可选依赖需要说明的一点是，在理想的情况下，是不应该使用可选依赖的。前面我们可以看到，使用可选依赖的原因是某一个项目实现了多个特性，在面向对象设计中，有个<strong>单一职责性原则</strong>，意指一个类应该只有一项职责，而不是糅合太多的功能。这个原则在规划Maven项目的时候也同样适用。</p>
+</blockquote>
+<h1 id="依赖的最佳实践"><a href="#依赖的最佳实践" class="headerlink" title="依赖的最佳实践"></a>依赖的最佳实践</h1><h2 id="排除依赖"><a href="#排除依赖" class="headerlink" title="排除依赖"></a>排除依赖</h2><p>当项目A依赖于项目B，同时不想引入传递依赖C，就可以使用exclusions排除依赖C，同时在A中显示声明C。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">project</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xxx.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project-a<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.O.O<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xxx.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project-b<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">exclusions</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;<span class="name">exclusion</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xxx.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">					<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project-c<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">				<span class="tag">&lt;/<span class="name">exclusion</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;/<span class="name">exclusions</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.xxx.xx<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>project-c<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">			<span class="tag">&lt;<span class="name">version</span>&gt;</span>1.1.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>代码中使用exclusions 元素声明排除依赖，exclusions 可以包含一个或者多个exclusion子元素，因此可以排除一个或者多个传递性依赖。需要注意的是，声明exclusion 的时候只需要groupId 和artifactld, 而不需要version元素，这是因为只需要groupId和artifactId就能唯一定位依赖图中的某个依赖。</p>
+<p>换句话说，Maven 解析后的依赖中，不可能出现groupId和artifactld 相同，但是version不同的两个依赖。</p>
+<h2 id="归类依赖"><a href="#归类依赖" class="headerlink" title="归类依赖"></a>归类依赖</h2><p>统一定义版本号，进行版本控制。示例如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">fastjson.version</span>&gt;</span>1.2.46<span class="tag">&lt;/<span class="name">fastjson.version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">dependencyManagement</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework.cloud<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-cloud-dependencies<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>Edgware.SR3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">type</span>&gt;</span>pom<span class="tag">&lt;/<span class="name">type</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">scope</span>&gt;</span>import<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>com.alibaba<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>fastjson<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;fastjson.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependencyManagement</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="优化依赖"><a href="#优化依赖" class="headerlink" title="优化依赖"></a>优化依赖</h2><blockquote>
+<p>1、mvn dependency:list</p>
+</blockquote>
+<p>查看当前项目已解析的依赖</p>
+<blockquote>
+<p>2、mvn dependency:tree</p>
+</blockquote>
+<p>查看当前项目的依赖树</p>
+<blockquote>
+<p>3、mvn dependency:analyze</p>
+</blockquote>
+<p>分析当前项目的依赖</p>
+<p>结果中重要的是两个部分。、</p>
+<ol>
+<li>首先是Used undeclared dependencies,意指项目中使用到的，但是没有显式声明的依赖。</li>
+</ol>
+<p>显式声明任何项目中直接用到的依赖。</p>
+<ol start="2">
+<li>还有一个重要的部分是Unused declared dependencies.意指项目中未使用的，但显式声明的依赖，这里有spring-core 和spring-beans.需要注意的是，对于这样一类依赖，我们不应该简单地直接删除其声明，而是应该仔细分析。</li>
+</ol>
+<p>由于dependency:analyze只会分析编译主代码和测试代码需要用到的依赖，一些执行测试和运行时需要的依赖它就发现不了</p>
+
+                
+<p class="pink-link-context">
+    <a href="/2019/09/12/build/maven/maven-pom/" rel="next" title="第二章 POM标签大全详解">
+    上一篇：第二章 POM标签大全详解
+  </a>
+</p>
+
+
+
+<p class="pink-link-context">
+    <a href="/2019/09/10/build/maven/maven-index/" rel="next" title="Maven 开篇">
+    下一篇：Maven 开篇
+  </a>
+</p>
+
+
+            </div>
+			
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+</div>
+
+        <div class="fixed-action-btn float-sitemap">
+    <a class="btn-floating btn-large pink">
+      <i class="fa fa-caret-square-o-up"></i>
+    </a>
+    <ul>
+      <li><a class="btn-return-top btn-floating waves-effect green" title="回到顶部"><i class="fa fa-arrow-circle-o-up"></i></a></li>
+      <li><a class="btn-floating waves-effect button-collapse yellow darken-1"  data-activates="main-menu" title="菜单"><i class="fa fa-navicon"></i></a></li>
+    </ul>
+  </div>
+
+    </main>
+    <footer class="page-footer indigo darken-1">
+    
+    <div class="footer-container container">
+        <div class="row">
+            
+            <div class="social-group col m4 s12">
+                <h5 class="white-text">社交</h5>
+                
+                    <a class="social-link" href="https://github.com/fengxici" target="_blank">
+                        <i class="fa fa-2x fa-github"></i>
+                    </a>
+                
+                    <a class="social-link" href="https://jq.qq.com/?_wv=1027&amp;k=5BqExDm" target="_blank">
+                        <i class="fa fa-2x fa-qq"></i>
+                    </a>
+                
+                
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+    </script>
+    <div class="site-visitors-container white-text">
+        <span>
+            <i class="fa fa-user"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+        </span>
+        <span>&nbsp;|&nbsp;</span>
+        <span>
+            <i class="fa fa-eye"></i>
+            <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+
+
+            </div>
+            
+
+            
+            <div class="col m8 s12">
+                <h5 class="white-text">友情链接</h5>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Master" target="_blank">Ukulele-Master</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Facade" target="_blank">Ukulele-Facade</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Data" target="_blank">Ukulele-Data</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Cloud" target="_blank">Ukulele-Cloud</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Boot" target="_blank">Ukulele-Boot</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Angular" target="_blank">Ukulele-Angular</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Win" target="_blank">Ukulele-Win</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-WeChatApp" target="_blank">Ukulele-WeChatApp</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-IOS" target="_blank">Ukulele-IOS</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Android" target="_blank">Ukulele-Android</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukelele-Dubbo" target="_blank">Ukelele-Dubbo</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Sharp" target="_blank">Ukulele-Sharp</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukelele-Mac" target="_blank">Ukelele-Mac</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukelele-Linux" target="_blank">Ukelele-Linux</a>
+                
+                    <a class="social-link" href="https://github.com/Fengxici/Ukulele-Vue" target="_blank">Ukulele-Vue</a>
+                
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="footer-copyright pink-link-context">
+        <div class="container">
+            © 2019 fengxici.github.io, All rights reserved.
+            <p class="right" style="margin-top: 0;">本博客由 <a href="https://hexo.io">Hexo</a> 强力驱动 | 主题 <a href="https://github.com/raytaylorlin/hexo-theme-raytaylorism">raytaylorism</a></p>
+        </div>
+    </div>
+</footer>
+
+
+    <noscript>
+    <div class="noscript">
+        <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+    </div>
+</noscript>
+<div class="noscript">
+    <p class="center-align">当前网速较慢或者你使用的浏览器不支持博客特定功能，请尝试刷新或换用Chrome、Firefox等现代浏览器</p>
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/materialize.min.js"></script>
+
+<script>
+    (function($) {
+        $(document).ready(function() {
+            // 隐藏禁用javascript（针对微信内置浏览器）的提示
+            $('.noscript').hide();
+
+            // 图片缩放效果
+            var $imgs = $('img').not('.slider-image').not('.avatar-image').not('.carousel-image').not('.card-cover-image').not('.qrcode');
+
+            // 给图片加上点击放大效果（materialbox插件）
+            $imgs.addClass('materialboxed').each(function(i, el) {
+                $(this).attr('data-caption', $(this).attr('alt') || ' ');
+            }).materialbox();
+
+            // 优化表格的显示
+            $('table').each(function() {
+                var $table = $(this);
+                // 除去多行代码的情况
+                if ($table.find('pre').length == 0) {
+                    $table.addClass('responsive-table striped bordered');
+                }
+            });
+
+            // 首页幻灯片
+            $('.slider').slider({indicators: true, full_width: true, interval: 8000});
+
+            $(".button-collapse").sideNav();
+            $(".category-menu").sideNav();
+
+            // 针对gallery post
+            $('.carousel').carousel({full_width: true});
+            $('.carousel-control.prev').click(function() {
+                $('.carousel').carousel('prev');
+            });
+            $('.carousel-control.next').click(function() {
+                $('.carousel').carousel('next');
+            });
+
+            // 文章目录
+            $('article').not('.simple-article').find('h1').add('h2').add('h3').add('h4').add('h5').add('h6').scrollSpy();
+
+            // 目录随屏幕滚动（防止目录过长越过footer）
+            var $toc = $('.toc');
+            var scrollTargetTop = 0;
+            $(window).scroll(function() {
+                var $activeLink = $toc.find('a.active.section');
+                if ($(window).scrollTop() < 100) {
+                    scrollTargetTop = 0;
+                } else {
+                    if ($activeLink[0]) {
+                        scrollTargetTop = $activeLink.offset().top - $toc.offset().top;
+                    }
+                }
+                $toc.css('top', '-' + scrollTargetTop + 'px');
+            });
+
+            // 修正文章目录的left-border颜色
+            var color = $('.table-of-contents-text').css('color');
+            $('.table-of-contents-link').css('border-left-color', color);
+
+            // 针对移动端做的优化：FAB按钮点击一下收回
+            if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                $('.fixed-action-btn').addClass('click-to-toggle');
+            }
+            // 回到顶部
+            $('.btn-return-top').click(function() {
+                $('body, html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+
+            // 重置读书页面的Tab标签页的颜色
+            $('li.tab a').hover(function() {
+                $(this).toggleClass('text-lighten-4');
+            });
+            $('.indicator').addClass('pink lighten-2');
+
+            
+
+            // 搜索功能
+            $('.modal-trigger').leanModal({
+                // 打开搜索框时自动聚焦
+                ready: function() {
+                    if ($('#search').is(":visible")) {
+                        $('#search-input').focus();
+                    }
+                }
+            });
+            var searchXml = "search.xml";
+            if (searchXml.length == 0) {
+             	searchXml = "search.xml";
+            }
+            var searchPath = "/" + searchXml;
+            initSearch(searchPath, 'search-input', 'search-result');
+        });
+
+        // 初始化搜索与匹配函数
+        var initSearch = function(path, search_id, content_id) {
+            'use strict';
+            $.ajax({
+                url: path,
+                dataType: "xml",
+                success: function(xmlResponse) {
+                    // get the contents from search data
+                    var datas = $("entry", xmlResponse).map(function() {
+                        return {
+                            title: $("title", this).text(),
+                            content: $("content", this).text(),
+                            url: $("url", this).text()
+                        };
+                    }).get();
+                    var $input = document.getElementById(search_id);
+                    var $resultContent = document.getElementById(content_id);
+                    $input.addEventListener('input', function() {
+                        var str = '<ul class=\"search-result-list\">';
+                        var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                        $resultContent.innerHTML = "";
+                        if (this.value.trim().length <= 0) {
+                            return;
+                        }
+                        // perform local searching
+                        datas.forEach(function(data) {
+                            var isMatch = true;
+                            var content_index = [];
+                            var data_title = data.title.trim().toLowerCase();
+                            var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                            var data_url = data.url;
+                            var index_title = -1;
+                            var index_content = -1;
+                            var first_occur = -1;
+                            // only match artiles with not empty titles and contents
+                            if (data_title != '' && data_content != '') {
+                                keywords.forEach(function(keyword, i) {
+                                    index_title = data_title.indexOf(keyword);
+                                    index_content = data_content.indexOf(keyword);
+                                    if (index_title < 0 && index_content < 0) {
+                                        isMatch = false;
+                                    } else {
+                                        if (index_content < 0) {
+                                            index_content = 0;
+                                        }
+                                        if (i == 0) {
+                                            first_occur = index_content;
+                                        }
+                                    }
+                                });
+                            }
+                            // show search results
+                            if (isMatch) {
+                                keywords.forEach(function(keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    data_title = data_title.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                });
+
+                                str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                                var content = data.content.trim().replace(/<[^>]+>/g, "");
+                                if (first_occur >= 0) {
+                                    // cut out 100 characters
+                                    var start = first_occur - 20;
+                                    var end = first_occur + 80;
+                                    if (start < 0) {
+                                        start = 0;
+                                    }
+                                    if (start == 0) {
+                                        end = 100;
+                                    }
+                                    if (end > content.length) {
+                                        end = content.length;
+                                    }
+                                    var match_content = content.substring(start, end);
+                                    // highlight all keywords
+                                    keywords.forEach(function(keyword) {
+                                        var regS = new RegExp(keyword, "gi");
+                                        match_content = match_content.replace(regS, "<span class=\"search-keyword pink lighten-2\">" + keyword + "</span>");
+                                    });
+
+                                    str += "<p class=\"search-result\">..." + match_content + "...</p>"
+                                }
+                                str += "</li>";
+                            }
+                        });
+                        str += "</ul>";
+                        $resultContent.innerHTML = str;
+                    });
+                }
+            });
+        }
+    })(jQuery);
+</script>
+
+
+<script src="/js/prettify.js"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("pre").addClass("prettyprint");
+        prettyPrint();
+    });
+</script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+<script type="text/javascript" async
+  src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+</script>
+
+
+
+</body>
+</html>
