@@ -171,6 +171,22 @@
             
 
             <li class="collapse-level-0" collapse-level="0">
+                <a class="no-padding" href="/categories/构建/">
+                    构建 <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-1" collapse-level="1">
+                <a class="no-padding" href="/categories/构建/Maven/">
+                    Maven <span class="right">9 篇</span></a>
+                </a>
+            </li>
+
+        
+
+            <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/spring-cloud/">
                     spring-cloud <span class="right">14 篇</span></a>
                 </a>
@@ -188,7 +204,7 @@
 
             <li class="collapse-level-0" collapse-level="0">
                 <a class="no-padding" href="/categories/Ukulele/">
-                    Ukulele <span class="right">2 篇</span></a>
+                    Ukulele <span class="right">3 篇</span></a>
                 </a>
             </li>
 
@@ -203,24 +219,16 @@
         
 
             <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/Ukulele/Spring-Cloud/">
-                    Spring-Cloud <span class="right">1 篇</span></a>
-                </a>
-            </li>
-
-        
-
-            <li class="collapse-level-0" collapse-level="0">
-                <a class="no-padding" href="/categories/构建/">
-                    构建 <span class="right">9 篇</span></a>
+                <a class="no-padding" href="/categories/Ukulele/Angular/">
+                    Angular <span class="right">1 篇</span></a>
                 </a>
             </li>
 
         
 
             <li class="collapse-level-1" collapse-level="1">
-                <a class="no-padding" href="/categories/构建/Maven/">
-                    Maven <span class="right">9 篇</span></a>
+                <a class="no-padding" href="/categories/Ukulele/Spring-Cloud/">
+                    Spring-Cloud <span class="right">1 篇</span></a>
                 </a>
             </li>
 
@@ -288,11 +296,11 @@
             
     <div class="tags-row">
         
-            <a href="/tags/清单/" class="chip pink lighten-1">清单</a>
-        
             <a href="/tags/部署/" class="chip pink lighten-1">部署</a>
         
             <a href="/tags/开发/" class="chip pink lighten-1">开发</a>
+        
+            <a href="/tags/清单/" class="chip pink lighten-1">清单</a>
         
     </div>
 
@@ -311,7 +319,7 @@
 <tr><td> 项目</td><td>描述</td><td>子项目</td><td>链接</td></tr>
 </thead>
 <tbody>
-<tr><td rowspan="4">ukulel-boot</td><td rowspan="4">spring cloud微服务基础组建</td><td>注册中心(register)</td><td rowspan="4"> <a href="https://github.com/Fengxici/Ukulele-Boot" target="_blank" rel="noopener">https://github.com/Fengxici/Ukulele-Boot</a></td></tr>
+<tr><td rowspan="4">ukulel-boot</td><td rowspan="4">spring cloud微服务基础组件</td><td>注册中心(register)</td><td rowspan="4"> <a href="https://github.com/Fengxici/Ukulele-Boot" target="_blank" rel="noopener">https://github.com/Fengxici/Ukulele-Boot</a></td></tr>
 <tr><td>监控（monitor)</td></tr>
 <tr><td>熔断（circuit) </td></tr>
 <tr><td>链路（trace）</td></tr>
@@ -364,6 +372,7 @@
 </li>
 </ol>
 <p><strong>注册中心必须启动，其他所有服务都会注册到注册中心</strong></p>
+<p><img src="/images/ukulele/spring-cloud/register.png" alt="注册中心登陆界面"><br><img src="/images/ukulele/spring-cloud/register2.png" alt="注册中心面板"></p>
 <h3 id="监控"><a href="#监控" class="headerlink" title="监控"></a>监控</h3><p>端口 <strong>5050</strong> 用户名及密码 <strong>root/root</strong> 可在配置文件resources/application.yml中进行修改。<strong>若注册中心的端口发生变更，此处的配置也必须要进行对应的修改</strong>。访问地址为：<a href="http://ip:port" target="_blank" rel="noopener">http://ip:port</a></p>
 <p>启动方式</p>
 <ol>
@@ -381,7 +390,7 @@
 </blockquote>
 </li>
 </ol>
-<p><strong>监控服务可选，在资源紧张的情况下可以不启动，资源缓解时再启动</strong></p>
+<p><strong>监控服务可选，如果您的硬件资源紧张可以选择不启动，不影响项目运行</strong><br><img src="/images/ukulele/spring-cloud/monitor.png" alt="监控登陆界面"><br><img src="/images/ukulele/spring-cloud/monitor2.png" alt="监控面板"></p>
 <h3 id="熔断"><a href="#熔断" class="headerlink" title="熔断"></a>熔断</h3><p>端口 <strong>6060</strong> 用户名及密码 <strong>root/root</strong> 可在配置文件resources/application.yml中进行修改。<strong>若注册中心的端口发生变更，此处的配置也必须要进行对应的修改</strong>。访问地址为：<a href="http://ip:port/hystrix" target="_blank" rel="noopener">http://ip:port/hystrix</a> 注意末尾的<strong>hystrix</strong></p>
 <p>启动方式</p>
 <ol>
@@ -399,7 +408,7 @@
 </blockquote>
 </li>
 </ol>
-<p><strong>熔断服务可选，在资源紧张的情况下可以不启动，资源缓解时再启动</strong></p>
+<p><strong>熔断服务可选，如果您的硬件资源紧张可以选择不启动，不影响项目运行</strong><br><img src="/images/ukulele/spring-cloud/circuit.jpg" alt="熔断面板"></p>
 <h3 id="链路"><a href="#链路" class="headerlink" title="链路"></a>链路</h3><p>端口 <strong>7070</strong> 用户名及密码 <strong>root/root</strong> 可在配置文件resources/application.yml中进行修改。<strong>若注册中心的端口发生变更，此处的配置也必须要进行对应的修改</strong>。访问地址为：<a href="http://ip:port" target="_blank" rel="noopener">http://ip:port</a></p>
 <p>启动方式</p>
 <ol>
@@ -417,7 +426,8 @@
 </blockquote>
 </li>
 </ol>
-<p><strong>链路服务可选，在资源紧张的情况下可以不启动，资源缓解时再启动</strong></p>
+<p><strong>链路服务可选，如果您的硬件资源紧张可以选择不启动，但需要将其他服务里的链路相关配置关掉</strong><br><img src="/images/ukulele/spring-cloud/trace.png" alt="链路面板"></p>
+<p>至此，ukulele基础组建已经启动完毕。如果您启动了所有服务，回看注册中心和监控会有如下效果<br><img src="/images/ukulele/spring-cloud/register3.jpg" alt="础组建注册成功后注册中心基面板"><br><img src="/images/ukulele/spring-cloud/monitor3.png" alt="基础组建完成后监控面板"></p>
 <h2 id="ukulele-master"><a href="#ukulele-master" class="headerlink" title="ukulele-master"></a>ukulele-master</h2><p>此项目经spring boot常用的一些组建进行了二次封装，以便于组织中的成员使用，甚至可以达到编码规范的作用。</p>
 <p>此项目中各个模块的功能将会在后续章节中介绍。</p>
 <p>安装</p>
@@ -457,6 +467,8 @@
 </blockquote>
 </li>
 </ol>
+<p>访问：<a href="http://ip:port/auth" target="_blank" rel="noopener">http://ip:port/auth</a> 您将看到登陆界面</p>
+<p><img src="/images/ukulele/spring-cloud/auth.jpg" alt="权限服务登陆界面"></p>
 <h3 id="ukulele-portal"><a href="#ukulele-portal" class="headerlink" title="ukulele-portal"></a>ukulele-portal</h3><p>系统配置。端口 <strong>10101</strong></p>
 <p>启动</p>
 <ol>
@@ -474,6 +486,7 @@
 </blockquote>
 </li>
 </ol>
+<p>访问 <a href="http://ip:port/swagger-ui.html" target="_blank" rel="noopener">http://ip:port/swagger-ui.html</a> 您将看到接口清单界面<br><img src="/images/ukulele/spring-cloud/portal-swagger.png" alt="门户服务接口清单界面"></p>
 <h3 id="ukulele-syslog"><a href="#ukulele-syslog" class="headerlink" title="ukulele-syslog"></a>ukulele-syslog</h3><p>用户操作日志。端口 <strong>20202</strong></p>
 <p>启动</p>
 <ol>
@@ -508,6 +521,7 @@
 </blockquote>
 </li>
 </ol>
+<p>访问 <a href="http://ip:port/swagger-ui.html" target="_blank" rel="noopener">http://ip:port/swagger-ui.html</a> 您将看到接口清单界面<br><img src="/images/ukulele/spring-cloud/user-swagger.png" alt="用户服务接口清单界面"></p>
 <h3 id="ukulele-gateway"><a href="#ukulele-gateway" class="headerlink" title="ukulele-gateway"></a>ukulele-gateway</h3><p>系统用户服务。端口 <strong>10000</strong></p>
 <p>启动</p>
 <ol>
@@ -527,6 +541,11 @@
 </ol>
 <p><strong>gateway服务启动前需先启动auth服务，其他无先后顺序要求</strong>。因网关中采用的是serviceId来路由服务的，注册中心需要一点点时间来发现服务，所以建议gateway服务最后启动，利用gateway启动的时间差，等它好之后可以立即使用了。</p>
 <p>至此所有项目启动完成。</p>
+<p>访问 <a href="http://ip:port/swagger-ui.html" target="_blank" rel="noopener">http://ip:port/swagger-ui.html</a> 您将看到汇总其他服务的接口清单界面<br><img src="/images/ukulele/spring-cloud/gateway-swagger.png" alt="用户服务接口清单界面"></p>
+<p>至此所有项目启动完成。此时在回看注册中心和监控界面，将是如下效果<br><img src="/images/ukulele/spring-cloud/register4.png" alt="所有服务注册中心界面"><br><img src="/images/ukulele/spring-cloud/monitor4.png" alt="所有服务监控界面"></p>
+<p>ukulele的angular版前端界面如下<br><img src="/images/ukulele/spring-cloud/angular-login.png" alt="angular版登陆界面"><br><img src="/images/ukulele/spring-cloud/angular-manage.png" alt="angular版管理界面"></p>
+<p>本博客也会有相关文章对前端界面进行详细介绍，欢迎关注。</p>
+<p>在此也感谢优秀的<a href="https://ng-alain.com/zh" target="_blank" rel="noopener">ng-alain</a>项目。</p>
 <h1 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h1><p>各项目以maven方式导入开发工具。若您不了解maven建议您先去官网学习，或者在本博客maven章节中快速浏览。如果您不了解Spring Cloud，同样建议您先去官网学习，当然，本博客已有相关文章可供快速实践。</p>
 <p>ukulele-master、ukulele-data、ukulele-facade三个库项目如果有变更，请在各自项目根路径下运行<strong>mvn install</strong>安装至本地仓库。如此，ukulele-cloud项目才能引用到。</p>
 <p>如您要开发新服务，请参考portal、user或者syslog（俗称依样画葫芦）。</p>
@@ -541,8 +560,8 @@
 
 
 <p class="pink-link-context">
-    <a href="/2019/09/18/build/maven/maven-cmd/" rel="next" title="第八章 一些常用的Maven命令">
-    下一篇：第八章 一些常用的Maven命令
+    <a href="/2019/10/16/ukulele/angular/start/" rel="next" title="第一章 Get Start">
+    下一篇：第一章 Get Start
   </a>
 </p>
 
